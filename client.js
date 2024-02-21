@@ -12,7 +12,15 @@ const connect = function () {
 
   conn.on("connect", () => {
     conn.write("Name: CAM");
+
   });
+
+  //manually moved the snake 
+  // conn.on("connect", () => {
+  //   setTimeout(() => {
+  //   conn.write('Move: up');
+  //   }, 2000)
+  // });
 
   conn.on("data", (data) => {
     console.log("server says: ", data);
