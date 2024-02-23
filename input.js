@@ -12,12 +12,13 @@ const setupInput = function (conn) {
 
 const handleUserInput = function (key) {
   if (key === '\u0003') {
+    console.log("Goodbye for now!");
     process.exit();
   }
   // Send movement commands to the server based on key pressed.
   if (key === 'w' || key === 'W') {
     connection.write("Move: up");
-  } 
+  }
   if (key === 'd' || key === 'D') {
     connection.write("Move: right");
   }

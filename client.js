@@ -1,9 +1,10 @@
 const net = require("net");
+const { IP, PORT } = require("./constants");
 
 const connect = function () {
   const conn = net.createConnection({
-    host: 'localhost',
-    port: 50541,
+    host: IP,
+    port: PORT,
   });
 
   conn.on('connect', () => {
@@ -14,7 +15,7 @@ const connect = function () {
     conn.write("Name: CAM");
     setTimeout(() => {
       conn.write("Say: Let's get those dots!!");
-    }, 2000);
+    }, 4000);
     setTimeout(() => {
       conn.write("Say: Yahhh Buddy!!");
     }, 12000);
