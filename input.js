@@ -1,7 +1,7 @@
-const { connect } = require("./client")
-const conn = connect();
+let connection;
 
-const setupInput = function (key) {
+const setupInput = function (conn) {
+  connection = conn;
   const stdin = process.stdin;
   stdin.setRawMode(true);
   stdin.setEncoding("utf8");
@@ -15,10 +15,18 @@ const handleUserInput = function (key) {
     process.exit();
   }
   // Send movement commands to the server based on key pressed.
-  if (key === '\x1b[A') conn.write(`Move: up`);
-  if (key === '\x1b[C') conn.write(`Move: right`);
-  if (key === '\x1b[B') conn.write(`Move: down`);
-  if (key === '\x1b[D') conn.write(`Move: left`);
+  if (key === 'w' || key === 'W') {
+    connection.write("Move: up");
+  } 
+  if (key === 'd' || key === 'D') {
+    connection.write("Move: right");
+  }
+  if (key === 's' || key === 'S') {
+    connection.write("Move: down");
+  }
+  if (key === 'a' || key === 'A') {
+    connection.write("Move: left");
+  }
 };
 
 module.exports = { setupInput }
