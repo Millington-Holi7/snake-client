@@ -12,6 +12,16 @@ const connect = function () {
 
   conn.on("connect", () => {
     conn.write("Name: CAM");
+    setTimeout(() => {
+      conn.write("Say: Let's get those dots!!");
+    }, 2000);
+    setTimeout(() => {
+      conn.write("Say: Yahhh Buddy!!");
+    }, 12000);
+
+    setTimeout(() => {
+      conn.write("Say: Yahhh Buddy!!");
+    }, 20000);
 
   });
 
