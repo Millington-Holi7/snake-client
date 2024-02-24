@@ -9,10 +9,10 @@ Before you can run this client, you will need to be running the server side whic
 ## Final Product
 
 I added text to appear when the user exits the game
-(#![alt text](image.png))
+![alt text](image.png)
 
 I added text to show up in intervals during the game
-(#![alt text](<Screenshot 2024-02-24 114825.jpg>))
+![alt text](<Screenshot 2024-02-24 114825.jpg>)
 
 
 ## Getting Started
