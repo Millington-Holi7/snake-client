@@ -24,4 +24,4 @@ Before you can run this client, you will need to be running the server side whic
 - Use your WASD keys to navigate your snake up, down, left, or right.
 - Don't hit the sides or yourself or the game finishes.
 - Press CTRL + C to exit. 
-- Most inportant, enjoy the game.
+- Most importantly, enjoy the game.
